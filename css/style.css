@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterSemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/InterBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.gallery-container {
+  background: #f4f6f9;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 879px;
+  padding: 20px 360px;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.gallery-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111827;
+}
+
+.upload-btn {
+  background-color: #111827;
+  color: #f4f6f9;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #31363c;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.photo-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-img {
+  width: 100%;
+  height: 288px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-info {
+  padding: 16px;
+}
+
+.photo-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.photo-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #6b7280;
+}
+
+@media (max-width: 1400px) {
+  .gallery-container {
+    padding: 40px 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-container {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
